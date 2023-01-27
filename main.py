@@ -4,12 +4,20 @@ class Student:
                 self.name = name
                 self.gladness = 0
                 self.progress = 0
+                self.many = 1000
                 self.alive = True
+        def work(self):
+                self.many += 100
+                self.gladness -= 10
+                self.progress += 10
+                print('work')
         def study(self):
+                self.many -=30
                 self.progress += 20
                 self.gladness -= 10
                 print('Study time')
         def chill(self):
+                self.many -= 250
                 self.gladness += 35
                 self.progress -= 8
                 print('Chill time')
@@ -21,15 +29,18 @@ class Student:
         def exam(self):
                 self.progress += 30
                 self.gladness -= 15
+                self.many -= 100
                 print('work on the exam')
         def live(self):
-                live_cube = randint(1,5)
+                live_cube = randint(1,6)
                 if live_cube == 1:
                         self.study()
                 elif live_cube == 2:
                         self.chill()
                 elif live_cube == 3:
                         self.sleep()
+                elif live_cube == 6:
+                        self.work()
                 elif live_cube == 4:
                         self.say_hello()
                 elif live_cube == 5:
