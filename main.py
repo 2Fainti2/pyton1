@@ -62,7 +62,7 @@ class pet:
                 self.eating = 0
         def eat(self,human):
                 self.eating += 20
-                print(self.name, "eat")
+                print(self.name, "eat",)
                 
         def final(self):
                 if self.eating == 100:
@@ -73,7 +73,7 @@ class human:
 			self.title = title
 			self.eat_pet="None"
 	def eat(self,pet):
-			print()
+			print(pet.name,"eat")
                 
 
 print('Bob\'s life')
@@ -94,3 +94,58 @@ pet1 = pet('Bobby')
 human1 = human('John')
 pet1.eat(human1)
 human1.eat(pet1)
+
+
+
+class animal:
+        def __init__(self,name):
+                self.name = name
+                self.legs = 4
+                self.body = 1
+        def run(self):
+                print(self.name,"runing")
+        def jump(self):
+                print(self.name,"jumping")
+
+class dog(animal):
+        def __init__(self,name):
+                super().__init__(name)
+                self.tail= 1
+        def barks(self):
+                print(self.name,"barks")
+class cat(animal):
+        def __init__(self,name):
+                super().__init__(name)
+                self.claws= 20
+        def scratches(self):
+                print(self.name,"scratches") 
+class hamster(animal):
+        def __init__(self,name):
+                super().__init__(name)
+                self.nose= 1
+        def eats(self):
+                print(self.name,"eats")                 
+                
+
+
+        
+
+
+
+
+
+obj1 = animal('animal')
+obj1.run()
+obj1.jump()
+obj2 = dog("dog")
+obj2.run()
+obj2.jump()
+obj2.barks()
+obj3 = cat("cat")
+obj3.run()
+obj3.jump()
+obj3.scratches()
+obj4 = hamster("hamster")
+obj4.run()
+obj4.jump()
+obj4.eats()
