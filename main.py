@@ -56,6 +56,24 @@ class Student:
                 elif self.gladness < -20:
                         print('Depression :(')
                         self.alive = False
+class pet:
+        def __init__(self,name):
+                self.name = name
+                self.eat = 0
+        def eat(self,human):
+                self.eat += 20
+                print(self.name, "eat", human.title)
+                
+        def final(self):
+                if self.eat == 100:
+                        print('eat good')
+                        self.alive = False        
+class human:
+        def __init__(self,title):
+                self.eat_pet="None"
+        def eat(self,pet):
+                print(pet.name,"eat")
+                
 
 print('Bob\'s life')
 obj1 = Student('Bob')
@@ -70,3 +88,4 @@ for i in range(365):
 	if obj2.alive == False:
 		break
 	obj2.live()
+        
