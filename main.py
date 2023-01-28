@@ -59,20 +59,21 @@ class Student:
 class pet:
         def __init__(self,name):
                 self.name = name
-                self.eat = 0
+                self.eating = 0
         def eat(self,human):
-                self.eat += 20
-                print(self.name, "eat", human.title)
+                self.eating += 20
+                print(self.name, "eat")
                 
         def final(self):
-                if self.eat == 100:
+                if self.eating == 100:
                         print('eat good')
                         self.alive = False        
 class human:
-        def __init__(self,title):
-                self.eat_pet="None"
-        def eat(self,pet):
-                print(pet.name,"eat")
+	def __init__(self,title):
+			self.title = title
+			self.eat_pet="None"
+	def eat(self,pet):
+			print()
                 
 
 print('Bob\'s life')
@@ -88,4 +89,8 @@ for i in range(365):
 	if obj2.alive == False:
 		break
 	obj2.live()
-        
+
+pet1 = pet('Bobby')
+human1 = human('John')
+pet1.eat(human1)
+human1.eat(pet1)
