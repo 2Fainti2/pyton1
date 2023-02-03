@@ -149,3 +149,57 @@ obj4 = hamster("hamster")
 obj4.run()
 obj4.jump()
 obj4.eats()
+
+
+
+class Man:
+        def __init__(self,name):
+                self.name = name
+                self.legs = 2
+                self.body = 1
+                self.Hands = 2
+        def go(self):
+                print(self.name,"going")
+        def jump(self):
+                print(self.name,"jumping")
+
+class teacher (Man):
+        def __init__(self,name):
+                super().__init__(name)
+                self.Weight= 70
+        def teach(self):
+                print(self.name,"teach")
+        def work(self):
+                print(self.name,"work")
+                
+class Disciple (Man):
+        def __init__(self,name):
+                super().__init__(name)
+                self.growth = 160
+        def Learning(self):
+                print(self.name,"Learning")
+        def play(self):
+                print(self.name,"play")                
+             
+                
+
+
+        
+
+
+
+
+
+obj5 = Man('Man')
+obj5.go()
+obj5.jump()
+obj6 = teacher("teacher")
+obj6.go()
+obj6.jump()
+obj6.teach()
+obj6.work()
+obj7 = Disciple("Disciple")
+obj7.go()
+obj7.jump()
+obj7.Learning()
+obj7.play()
